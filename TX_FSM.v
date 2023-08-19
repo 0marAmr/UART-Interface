@@ -1,8 +1,8 @@
 module TX_FSM (
     input wire CLK, RST,
     input wire Data_Valid, PAR_EN, ser_done,
-    output wire ser_en, busy,
-    output wire [1:0] mux_sel
+    output reg ser_en, busy,
+    output reg [1:0] mux_sel
 );
     
     localparam STATE_REG_WIDTH = 3;  /*5 states*/
@@ -79,12 +79,20 @@ module TX_FSM (
             end  
             STOP : begin
                 /*NS Logic*/
-                next_state <= IDLE;
+                if (Data_Valid) begin
+                    next_state <= START;
+                end
+                else begin
+                    next_state <= IDLE;
+                end
                 
                 /*OP logic*/
                 busy = 'b1;
                 mux_sel = 'b10;
             end 
+            default : begin
+                next_state <= IDLE;
+            end
         endcase
     end
 endmodule
