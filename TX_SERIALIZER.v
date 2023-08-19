@@ -5,7 +5,7 @@ module TX_SERIALIZER #(
     input wire ser_en, Data_Valid, busy,
     input wire [DATA_WIDTH-1:0] P_DATA,
     output wire ser_done,
-    output reg ser_data
+    output wire ser_data
 );
     
     /*Shift right register*/
@@ -19,7 +19,7 @@ module TX_SERIALIZER #(
             serializer <= P_DATA;
         end
         else if (ser_en) begin
-            {serializer[DATA_WIDTH-2:0], ser_data} <= serializer; // shift right
+            serializer <= serializer >> 1; // shift right
         end
     end
     
@@ -36,7 +36,7 @@ module TX_SERIALIZER #(
             count <= 0;
         end
     end
-
+    assign ser_data = serializer[0];
     assign ser_done = &count;
 
 endmodule
