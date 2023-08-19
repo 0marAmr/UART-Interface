@@ -9,7 +9,7 @@ module TX_OUTPUT (
     reg mux_out;
 
     always @(*) begin
-        case (param)
+        case (mux_sel)
             2'b00: mux_out = in0;
             2'b01: mux_out = in1;
             2'b10: mux_out = in2;
