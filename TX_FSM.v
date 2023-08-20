@@ -1,7 +1,7 @@
 module TX_FSM (
     input wire CLK, RST,
     input wire Data_Valid, PAR_EN, ser_done,
-    output reg ser_en, busy,
+    output reg ser_en, busy, par_en,
     output reg [1:0] mux_sel
 );
     
@@ -31,6 +31,7 @@ module TX_FSM (
         mux_sel = 'b00;
         ser_en = 'b0;
         busy = 'b0;
+        par_en = 'b0;
         case (current_state)
             IDLE : begin
                 /*NS Logic*/
@@ -42,7 +43,10 @@ module TX_FSM (
                 end
 
                 /*OP logic*/
-                // same as default
+                if(PAR_EN && Data_Valid) 
+                    par_en = 1'b1;    
+                else
+                    par_en = 1'b0;    
             end 
             START : begin
                 /*NS Logic*/
@@ -66,7 +70,7 @@ module TX_FSM (
                 
                 /*OP logic*/
                 busy = 'b1;
-                mux_sel = 'b01;
+                mux_sel = 'b10;
                 ser_en = 'b1;
             end  
             PARITY : begin
@@ -88,7 +92,7 @@ module TX_FSM (
                 
                 /*OP logic*/
                 busy = 'b1;
-                mux_sel = 'b10;
+                mux_sel = 'b01;
             end 
             default : begin
                 next_state <= IDLE;

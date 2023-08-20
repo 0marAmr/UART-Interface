@@ -10,7 +10,7 @@ module TX_PARITY_CALC #(
     
     localparam  EVEN_PARITY  = 'b1;
 
-    always @(posedge clk or negedge RST) begin
+    always @(posedge CLK or negedge RST) begin
         if (~RST) begin
             par_bit <= 0;
         end
