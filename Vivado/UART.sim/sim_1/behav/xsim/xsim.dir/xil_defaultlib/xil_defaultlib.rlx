@@ -2,10 +2,11 @@
 2020.2
 Oct 14 2022
 05:20:55
-F:/Digital_Track/Design_Projects/UART/TX_FSM.v,1692560376,verilog,,F:/Digital_Track/Design_Projects/UART/TX_OUTPUT.v,,TX_FSM,,,,,,,,
+,,,,,,TX_TB,,,,,,,,
+F:/Digital_Track/Design_Projects/UART/TX_FSM.v,1692672525,verilog,,F:/Digital_Track/Design_Projects/UART/TX_OUTPUT.v,,TX_FSM,,,,,,,,
 F:/Digital_Track/Design_Projects/UART/TX_OUTPUT.v,1692408912,verilog,,F:/Digital_Track/Design_Projects/UART/TX_PARITY_CALC.v,,TX_OUTPUT,,,,,,,,
-F:/Digital_Track/Design_Projects/UART/TX_PARITY_CALC.v,1692558156,verilog,,F:/Digital_Track/Design_Projects/UART/TX_SERIALIZER.v,,TX_PARITY_CALC,,,,,,,,
-F:/Digital_Track/Design_Projects/UART/TX_SERIALIZER.v,1692552360,verilog,,F:/Digital_Track/Design_Projects/UART/UART_TX.v,,TX_SERIALIZER,,,,,,,,
-F:/Digital_Track/Design_Projects/UART/TX_TB.v,1692553129,verilog,,,,UART_TB,,,,,,,,
-F:/Digital_Track/Design_Projects/UART/UART_TX.v,1692557004,verilog,,F:/Digital_Track/Design_Projects/UART/TX_TB.v,,UART_TX,,,,,,,,
+F:/Digital_Track/Design_Projects/UART/TX_PARITY_CALC.v,1692706086,verilog,,F:/Digital_Track/Design_Projects/UART/TX_SERIALIZER.v,,TX_PARITY_CALC,,,,,,,,
+F:/Digital_Track/Design_Projects/UART/TX_SERIALIZER.v,1692602732,verilog,,F:/Digital_Track/Design_Projects/UART/UART_TX.v,,TX_SERIALIZER,,,,,,,,
+,,,,,,,,,,,,,,
+F:/Digital_Track/Design_Projects/UART/UART_TX.v,1692602718,verilog,,F:/Digital_Track/Design_Projects/UART/TBs/TX_TB.v,,UART_TX,,,,,,,,
 F:/Digital_Track/Design_Projects/UART/Vivado/UART.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,,,,,,,

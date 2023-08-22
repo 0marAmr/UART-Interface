@@ -1,6 +1,6 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: D:/Vivado/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot UART_TB_behav xil_defaultlib.UART_TB xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Vivado/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TX_TB_behav xil_defaultlib.TX_TB xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -23,6 +23,6 @@ Compiling module xil_defaultlib.TX_SERIALIZER
 Compiling module xil_defaultlib.TX_PARITY_CALC
 Compiling module xil_defaultlib.TX_OUTPUT
 Compiling module xil_defaultlib.UART_TX
-Compiling module xil_defaultlib.UART_TB
+Compiling module xil_defaultlib.TX_TB
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot UART_TB_behav
+Built simulation snapshot TX_TB_behav

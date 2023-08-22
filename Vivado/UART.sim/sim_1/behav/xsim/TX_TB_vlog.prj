@@ -5,7 +5,7 @@ verilog xil_defaultlib  \
 "../../../../../TX_PARITY_CALC.v" \
 "../../../../../TX_SERIALIZER.v" \
 "../../../../../UART_TX.v" \
-"../../../../../TX_TB.v" \
+"../../../../../TBs/TX_TB.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="UART_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="UART_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="436.001 ns"></ZoomEndTime>
+      <Cursor1Time time="347.258 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="196"></NameColumnWidth>
+      <ValueColumnWidth column_width="153"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/UART_TB/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/RST" type="logic">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/Data_Valid" type="logic">
+      <obj_property name="ElementShortName">Data_Valid</obj_property>
+      <obj_property name="ObjectShortName">Data_Valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/PAR_EN" type="logic">
+      <obj_property name="ElementShortName">PAR_EN</obj_property>
+      <obj_property name="ObjectShortName">PAR_EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/PAR_TYP" type="logic">
+      <obj_property name="ElementShortName">PAR_TYP</obj_property>
+      <obj_property name="ObjectShortName">PAR_TYP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/P_DATA" type="array">
+      <obj_property name="ElementShortName">P_DATA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">P_DATA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/TX_OUT" type="logic">
+      <obj_property name="ElementShortName">TX_OUT</obj_property>
+      <obj_property name="ObjectShortName">TX_OUT</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/busy" type="logic">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/TX/U0_PAR_CALC/par_bit" type="logic">
+      <obj_property name="ElementShortName">par_bit</obj_property>
+      <obj_property name="ObjectShortName">par_bit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/UART_TB/TX/U0_FSM/current_state" type="array">
+      <obj_property name="ElementShortName">current_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[2:0]</obj_property>
+   </wvobject>
+</wave_config>
