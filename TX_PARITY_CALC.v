@@ -14,7 +14,7 @@ module TX_PARITY_CALC #(
         if(~RST)begin
             par_bit <= 1'b0;
         end
-        if (par_en) begin
+        else if (par_en) begin
             if (PAR_TYP == EVEN_PARITY) begin
                 par_bit <= ^P_DATA;
             end
