@@ -2,7 +2,7 @@ module TX_SERIALIZER #(
     parameter DATA_WIDTH = 8
 )(
     input wire CLK, RST,
-    input wire ser_en, Data_Valid, busy,
+    input wire ser_en, load,
     input wire [DATA_WIDTH-1:0] P_DATA,
     output wire ser_done,
     output wire ser_data
@@ -15,7 +15,7 @@ module TX_SERIALIZER #(
         if (~RST) begin
             serializer <=0;
         end
-        else if(Data_Valid && ~busy) begin
+        else if(load) begin
             serializer <= P_DATA;
         end
         else if (ser_en) begin

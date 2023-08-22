@@ -16,18 +16,18 @@ module UART_TX (
         .ser_en(ser_en),
         .busy(busy),
         .mux_sel(mux_sel),
-        .par_en(par_en)
+        .par_en(par_en),
+        .load(load)
     );
 
     TX_SERIALIZER U0_SER (
         .CLK(CLK),
         .RST(RST),
         .ser_en(ser_en),
-        .Data_Valid(Data_Valid),
-        .busy(busy),
         .P_DATA(P_DATA),
         .ser_done(ser_done),
-        .ser_data(ser_data)
+        .ser_data(ser_data),
+        .load(load)
     );
 
     TX_PARITY_CALC U0_PAR_CALC (

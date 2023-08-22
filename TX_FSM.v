@@ -1,7 +1,7 @@
 module TX_FSM (
     input wire CLK, RST,
     input wire Data_Valid, PAR_EN, ser_done,
-    output reg ser_en, busy, par_en,
+    output reg ser_en, busy, par_en, load,
     output reg [1:0] mux_sel
 );
     
@@ -32,6 +32,7 @@ module TX_FSM (
         ser_en = 'b0;
         busy = 'b0;
         par_en = 'b0;
+        load = 'b0;
         case (current_state)
             IDLE : begin
                 /*NS Logic*/
@@ -46,7 +47,13 @@ module TX_FSM (
                 if(PAR_EN && Data_Valid) 
                     par_en = 1'b1;    
                 else
-                    par_en = 1'b0;    
+                    par_en = 1'b0;
+                
+                /*Load the serializer*/
+                 if(Data_Valid)
+                    load = 'b1;
+                 else
+                    load = 'b0;    
             end 
             START : begin
                 /*NS Logic*/
@@ -55,6 +62,7 @@ module TX_FSM (
                 /*OP logic*/
                 busy = 'b1;
                 mux_sel = 'b00;
+
             end 
             SERIALIZATION : begin
                 /*NS Logic*/
@@ -93,6 +101,17 @@ module TX_FSM (
                 /*OP logic*/
                 busy = 'b1;
                 mux_sel = 'b01;
+
+                /*enable parity in case two frames are sent togeather (IDLE state is omitted) */
+                if(PAR_EN && Data_Valid) 
+                    par_en = 1'b1;    
+                else
+                    par_en = 1'b0;
+                 /*Load the serializer (in case IDLE is omitted)*/
+                 if(Data_Valid)
+                    load = 'b1;
+                 else
+                    load = 'b0;
             end 
             default : begin
                 next_state <= IDLE;
