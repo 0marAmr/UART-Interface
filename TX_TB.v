@@ -71,15 +71,21 @@ begin
   Data_Valid = 1'b1;
   @(negedge CLK)
   Data_Valid = 1'b0;
+  if(parity_en)
   repeat(10) @(negedge CLK);
+  else
+  repeat(9) @(negedge CLK);
+
 end
 endtask
 
 initial begin
     initialzie();
     reset();
-    // testing idle state
-    repeat(5) @(negedge CLK)
+
+    
+   // testing idle state
+    repeat(5) @(negedge CLK);
     // sending a frame, no parity
     tx_send(10,0,0);
     @(negedge CLK)
@@ -94,7 +100,20 @@ initial begin
     tx_send(15,1,odd_parity);
     tx_send(14,1,even_parity);
     
-
+    // changing data during transition
+    P_DATA = 10;
+    PAR_EN = 1;
+    PAR_TYP = odd_parity;
+    Data_Valid = 1'b1;
+    @(negedge CLK)
+    Data_Valid = 1'b0;
+    repeat(5) @(negedge CLK);
+    P_DATA = 255;
+    Data_Valid = 1'b1;
+    @(negedge CLK)
+    Data_Valid = 1'b0;
+    repeat(4) @(negedge CLK);
+    @(negedge CLK)
     $finish; 
 end
 
