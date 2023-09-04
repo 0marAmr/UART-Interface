@@ -1,10 +1,12 @@
-module RX_FSM (
+module RX_FSM #(
+    parameter DATA_WIDTH = 8
+)(
     input wire          CLK,                 // RX Clock input signal
     input wire          RST,                 // 
     input wire          RX_IN,
     input wire          PAR_EN,
     input wire   [2:0]  bit_cnt,
-    input wire          sampling_done,                    //edge_cnt,
+    input wire          bit_done,                    //edge_cnt,
     input wire          strt_glitch,
     input wire          par_err,
     input wire          stp_err,
@@ -49,6 +51,7 @@ module RX_FSM (
         data_samp_en        = 0;
         edge_count_enable   = 0;
         bit_count_enable    = 0;
+        Data_Valid          = 0;
         case (current_state)
             /*NS Logic*/
             IDLE: begin
@@ -64,11 +67,11 @@ module RX_FSM (
             end 
             START_CHK: begin
                 /*NS Logic*/
-                if (strt_glitch) begin
-                    next_state = IDLE;
-                end
-                else if (sampling_done) begin
-                    next_state = DESERIALIZE;
+                if (bit_done) begin
+                    if (strt_glitch)
+                        next_state = IDLE;
+                    else  
+                        next_state = DESERIALIZE;
                 end
                 else begin
                     next_state = START_CHK;
@@ -77,10 +80,12 @@ module RX_FSM (
                 /*OP logic*/
                 strt_chk_en = 'b1;
                 edge_count_enable = 'b1;
+                data_samp_en = 'b1;
+                
             end
             DESERIALIZE: begin
                 /*NS Logic*/
-                if (bit_cnt == 7 && sampling_done) begin
+                if (bit_cnt == (DATA_WIDTH - 1'b1) && bit_done) begin
                     if (PAR_EN) begin
                         next_state = PARITY_CHK;
                     end
@@ -93,7 +98,7 @@ module RX_FSM (
                 end
 
                 /*OP logic*/
-                if (sampling_done) begin
+                if (bit_done) begin
                 deser_en = 'b1;
                 end
                 edge_count_enable = 'b1;
@@ -102,14 +107,15 @@ module RX_FSM (
             end
             PARITY_CHK: begin
                 /*NS Logic*/
-                if (par_err) begin
-                    next_state = IDLE;
-                end
-                else if (sampling_done) begin
-                    next_state = STOP_CHK;
+
+                if (bit_done) begin
+                    if (par_err) 
+                        next_state = IDLE;
+                    else
+                        next_state = STOP_CHK;
                 end
                 else begin
-                    next_state = STOP_CHK;
+                    next_state = PARITY_CHK;
                 end
 
                 /*OP logic*/
@@ -119,11 +125,12 @@ module RX_FSM (
             end
             STOP_CHK: begin
                 /*NS Logic*/
-                if (stp_err) begin
-                    next_state = IDLE;
-                end
-                else if (sampling_done) begin
-                    next_state = OUTPUT;
+
+                if (bit_done) begin
+                    if (stp_err)
+                        next_state = IDLE;
+                    else
+                        next_state = OUTPUT;
                 end
                 else begin
                     next_state = STOP_CHK;
@@ -137,10 +144,10 @@ module RX_FSM (
             OUTPUT: begin
                 /*NS Logic*/
                 if(RX_IN) begin
-                    next_state = START_CHK;
+                    next_state = IDLE;
                 end
                 else begin
-                    next_state = IDLE;
+                    next_state = START_CHK;
                 end
 
                 /*OP logic*/
