@@ -14,5 +14,8 @@ module RX_STOP_CHECK (
             // stop bit must be 1
             stp_err <= ~sampled_bit;
         end
+        else begin
+            stp_err <= 'b0;
+        end
     end
 endmodule

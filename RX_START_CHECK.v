@@ -10,9 +10,12 @@ module RX_START_CHECK (
         if (~RST) begin
             strt_glitch <= 'b0;
         end
-        else begin
+        else if (strt_chk_en) begin
             // bit sampled = 1 means it was a glitch
             strt_glitch <= sampled_bit;
+        end
+        else begin
+            strt_glitch <= 'b0;
         end
     end
 endmodule
