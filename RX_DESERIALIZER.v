@@ -17,9 +17,6 @@ module RX_DESERIALIZER #(
         else if (deser_en) begin
             de_serializer <= {sampled_bit, de_serializer[7:1]};
         end
-        else begin
-            de_serializer <='b0
-        end
     end
 
     assign P_DATA = de_serializer;
