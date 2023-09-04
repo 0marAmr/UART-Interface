@@ -13,7 +13,8 @@ module RX_FSM (
     output reg          par_chk_en,
     output reg          deser_en,
     output reg          data_samp_en,
-    output reg          enable,
+    output reg          edge_count_enable,
+    output reg          bit_count_enable,
     output reg          Data_Valid
 );
 
@@ -41,12 +42,13 @@ module RX_FSM (
     /*Next State and output logic*/
     always @(*) begin
         /*Defualt Values*/
-        stp_chk_en  = 0;
-        strt_chk_en = 0;
-        par_chk_en  = 0;
-        deser_en    = 0;
-        data_samp_en = 0;
-        enable      = 0;
+        stp_chk_en          = 0;
+        strt_chk_en         = 0;
+        par_chk_en          = 0;
+        deser_en            = 0;
+        data_samp_en        = 0;
+        edge_count_enable   = 0;
+        bit_count_enable    = 0;
         case (current_state)
             /*NS Logic*/
             IDLE: begin
@@ -74,7 +76,7 @@ module RX_FSM (
 
                 /*OP logic*/
                 strt_chk_en = 'b1;
-                enable = 'b1;
+                edge_count_enable = 'b1;
             end
             DESERIALIZE: begin
                 /*NS Logic*/
@@ -94,7 +96,8 @@ module RX_FSM (
                 if (sampling_done) begin
                 deser_en = 'b1;
                 end
-                enable = 'b1;
+                edge_count_enable = 'b1;
+                bit_count_enable = 'b1;
                 data_samp_en = 'b1;
             end
             PARITY_CHK: begin
@@ -111,7 +114,7 @@ module RX_FSM (
 
                 /*OP logic*/
                 par_chk_en = 'b1;
-                enable = 'b1;
+                edge_count_enable = 'b1;
                 data_samp_en = 'b1;
             end
             STOP_CHK: begin
@@ -128,7 +131,7 @@ module RX_FSM (
 
                 /*OP logic*/
                 stp_chk_en = 'b1;
-                enable = 'b1;
+                edge_count_enable = 'b1;
                 data_samp_en = 'b1;
             end
             OUTPUT: begin
