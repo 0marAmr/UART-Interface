@@ -17,6 +17,9 @@ module RX_PARITY_CHECK #(
         else if (par_chk_en) begin
             par_err <= (sampled_bit != par_res);
         end
+        else begin
+            par_err <= 'b0;
+        end
     end
 
     reg par_res;
@@ -32,6 +35,9 @@ module RX_PARITY_CHECK #(
             else begin /*Odd Parity*/
                 par_res <= ~^P_DATA;
             end
+        end
+        else begin
+            par_res <= 'b0;
         end
     end
 
