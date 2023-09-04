@@ -3,13 +3,14 @@ module RX_EDGE_BIT_COUNTER (
     input wire          RST,                 
     input wire          edge_count_enable,
     input wire          bit_count_enable,
-    input wire  [4:0]   Prescale,
+    input wire  [5:0]   Prescale,
     output wire [2:0]   bit_cnt,
-    output wire [4:0]   edge_cnt
+    output wire [4:0]   edge_cnt,
+    output wire         bit_done
 );
     
-    wire [4:0] half_prescale;
-    assign half_prescale_p1 = (Prescale >> 1'b1) + 1'b1;
+    wire [4:0] prescale_m1;
+    assign prescale_m1 = Prescale - 1'b1;
     
     reg [4:0] edge_cnt_reg;
     always @(posedge CLK or negedge RST) begin
@@ -17,7 +18,7 @@ module RX_EDGE_BIT_COUNTER (
             edge_cnt_reg <= 'b0000;
         end
         else if(edge_count_enable) begin
-            if (edge_cnt_reg ==half_prescale_p1) begin
+            if (bit_done) begin
                 edge_cnt_reg <= 'b0000;
             end
             else begin
@@ -31,12 +32,15 @@ module RX_EDGE_BIT_COUNTER (
         if (~RST) begin
             bit_cnt_reg <= 'b000;
         end
-        else if((edge_cnt_reg ==half_prescale_p1) && bit_count_enable) begin
+        else if(bit_done && bit_count_enable) begin
                 bit_cnt_reg <= bit_cnt_reg + 1'b1;
             end
+        else if (~bit_count_enable) begin
+                bit_cnt_reg <= 'b000;
+        end
         end
 
         assign edge_cnt = edge_cnt_reg;
         assign bit_cnt = bit_cnt_reg;
-
+        assign bit_done = (edge_cnt_reg == prescale_m1);
 endmodule
