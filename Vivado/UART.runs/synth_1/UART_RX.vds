@@ -1,0 +1,250 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Sep  6 03:55:32 2023
+# Process ID: 4380
+# Current directory: F:/Digital_Track/Design_Projects/UART/Vivado/UART.runs/synth_1
+# Command line: vivado.exe -log UART_RX.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_RX.tcl
+# Log file: F:/Digital_Track/Design_Projects/UART/Vivado/UART.runs/synth_1/UART_RX.vds
+# Journal file: F:/Digital_Track/Design_Projects/UART/Vivado/UART.runs/synth_1\vivado.jou
+# Running On: Omars-PC, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 17095 MB
+#-----------------------------------------------------------
+source UART_RX.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 394.098 ; gain = 76.570
+Command: synth_design -top UART_RX -part xc7k70tfbv676-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 43288
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Vivado/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-6901] identifier 'par_res' is used before its declaration [F:/Digital_Track/Design_Projects/UART/RX_PARITY_CHECK.v:18]
+INFO: [Synth 8-11241] undeclared symbol 'bit_done', assumed default net type 'wire' [F:/Digital_Track/Design_Projects/UART/UART_RX.v:22]
+INFO: [Synth 8-11241] undeclared symbol 'strt_glitch', assumed default net type 'wire' [F:/Digital_Track/Design_Projects/UART/UART_RX.v:23]
+INFO: [Synth 8-11241] undeclared symbol 'par_err', assumed default net type 'wire' [F:/Digital_Track/Design_Projects/UART/UART_RX.v:24]
+INFO: [Synth 8-11241] undeclared symbol 'stp_err', assumed default net type 'wire' [F:/Digital_Track/Design_Projects/UART/UART_RX.v:25]
+INFO: [Synth 8-11241] undeclared symbol 'stp_chk_en', assumed default net type 'wire' [F:/Digital_Track/Design_Projects/UART/UART_RX.v:26]
+INFO: [Synth 8-11241] undeclared symbol 'strt_chk_en', assumed default net type 'wire' [F:/Digital_Track/Design_Projects/UART/UART_RX.v:27]
+INFO: [Synth 8-11241] undeclared symbol 'par_chk_en', assumed default net type 'wire' [F:/Digital_Track/Design_Projects/UART/UART_RX.v:28]
+INFO: [Synth 8-11241] undeclared symbol 'deser_en', assumed default net type 'wire' [F:/Digital_Track/Design_Projects/UART/UART_RX.v:29]
+INFO: [Synth 8-11241] undeclared symbol 'data_samp_en', assumed default net type 'wire' [F:/Digital_Track/Design_Projects/UART/UART_RX.v:30]
+INFO: [Synth 8-11241] undeclared symbol 'edge_count_enable', assumed default net type 'wire' [F:/Digital_Track/Design_Projects/UART/UART_RX.v:31]
+INFO: [Synth 8-11241] undeclared symbol 'bit_count_enable', assumed default net type 'wire' [F:/Digital_Track/Design_Projects/UART/UART_RX.v:32]
+INFO: [Synth 8-11241] undeclared symbol 'sampled_bit', assumed default net type 'wire' [F:/Digital_Track/Design_Projects/UART/UART_RX.v:55]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 833.852 ; gain = 414.898
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'UART_RX' [F:/Digital_Track/Design_Projects/UART/UART_RX.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RX_FSM' [F:/Digital_Track/Design_Projects/UART/RX_FSM.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RX_FSM' (0#1) [F:/Digital_Track/Design_Projects/UART/RX_FSM.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RX_EDGE_BIT_COUNTER' [F:/Digital_Track/Design_Projects/UART/RX_EDGE_BIT_COUNTER.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RX_EDGE_BIT_COUNTER' (0#1) [F:/Digital_Track/Design_Projects/UART/RX_EDGE_BIT_COUNTER.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RX_DATA_SAMPLING' [F:/Digital_Track/Design_Projects/UART/RX_DATA_SAMPLING.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RX_DATA_SAMPLING' (0#1) [F:/Digital_Track/Design_Projects/UART/RX_DATA_SAMPLING.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RX_DESERIALIZER' [F:/Digital_Track/Design_Projects/UART/RX_DESERIALIZER.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RX_DESERIALIZER' (0#1) [F:/Digital_Track/Design_Projects/UART/RX_DESERIALIZER.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RX_START_CHECK' [F:/Digital_Track/Design_Projects/UART/RX_START_CHECK.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RX_START_CHECK' (0#1) [F:/Digital_Track/Design_Projects/UART/RX_START_CHECK.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RX_PARITY_CHECK' [F:/Digital_Track/Design_Projects/UART/RX_PARITY_CHECK.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RX_PARITY_CHECK' (0#1) [F:/Digital_Track/Design_Projects/UART/RX_PARITY_CHECK.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RX_STOP_CHECK' [F:/Digital_Track/Design_Projects/UART/RX_STOP_CHECK.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'RX_STOP_CHECK' (0#1) [F:/Digital_Track/Design_Projects/UART/RX_STOP_CHECK.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'UART_RX' (0#1) [F:/Digital_Track/Design_Projects/UART/UART_RX.v:1]
+WARNING: [Synth 8-7129] Port Prescale[5] in module RX_EDGE_BIT_COUNTER is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 923.426 ; gain = 504.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 923.426 ; gain = 504.473
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 923.426 ; gain = 504.473
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'RX_FSM'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                           000001 |                              000
+               START_CHK |                           000010 |                              001
+             DESERIALIZE |                           000100 |                              010
+              PARITY_CHK |                           001000 |                              011
+                STOP_CHK |                           010000 |                              100
+                  OUTPUT |                           100000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'RX_FSM'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 923.426 ; gain = 504.473
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 1     
++---XORs : 
+	                8 Bit    Wide XORs := 2     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 10    
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 7     
+	   6 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 2     
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 1109.055 ; gain = 690.102
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 1109.055 ; gain = 690.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 1109.055 ; gain = 690.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1109.055 ; gain = 690.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1109.055 ; gain = 690.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1109.055 ; gain = 690.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1109.055 ; gain = 690.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1109.055 ; gain = 690.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1109.055 ; gain = 690.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     1|
+|3     |LUT2 |     4|
+|4     |LUT3 |     7|
+|5     |LUT4 |    12|
+|6     |LUT5 |     8|
+|7     |LUT6 |    12|
+|8     |FDCE |    28|
+|9     |FDPE |     1|
+|10    |IBUF |    11|
+|11    |OBUF |     9|
++------+-----+------+
+
+Report Instance Areas: 
++------+----------------+--------------------+------+
+|      |Instance        |Module              |Cells |
++------+----------------+--------------------+------+
+|1     |top             |                    |    94|
+|2     |  U0_DATA_SAMP  |RX_DATA_SAMPLING    |     9|
+|3     |  U0_DESER      |RX_DESERIALIZER     |    11|
+|4     |  U0_EB_COUNTER |RX_EDGE_BIT_COUNTER |    32|
+|5     |  U0_PAR_CHK    |RX_PARITY_CHECK     |     2|
+|6     |  U0_STP_CHK    |RX_STOP_CHECK       |     1|
+|7     |  U0_STRT_CKH   |RX_START_CHECK      |     1|
+|8     |  U1_FSM        |RX_FSM              |    17|
++------+----------------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1109.055 ; gain = 690.102
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1109.055 ; gain = 690.102
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:34 . Memory (MB): peak = 1109.055 ; gain = 690.102
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1118.867 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1216.145 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 974db2b8
+INFO: [Common 17-83] Releasing license: Synthesis
+41 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:38 . Memory (MB): peak = 1216.145 ; gain = 822.047
+INFO: [Common 17-1381] The checkpoint 'F:/Digital_Track/Design_Projects/UART/Vivado/UART.runs/synth_1/UART_RX.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file UART_RX_utilization_synth.rpt -pb UART_RX_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  6 03:56:59 2023...

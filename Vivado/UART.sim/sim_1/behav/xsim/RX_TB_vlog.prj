@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../RX_DATA_SAMPLING.v" \
+"../../../../../RX_DESERIALIZER.v" \
+"../../../../../RX_EDGE_BIT_COUNTER.v" \
+"../../../../../RX_FSM.v" \
+"../../../../../RX_PARITY_CHECK.v" \
+"../../../../../RX_START_CHECK.v" \
+"../../../../../RX_STOP_CHECK.v" \
+"../../../../../UART_RX.v" \
+"../../../../../TBs/RX_TB.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

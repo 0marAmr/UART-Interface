@@ -1,12 +1,19 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/TX_FSM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module TX_FSM
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/TX_OUTPUT.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module TX_OUTPUT
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/TX_PARITY_CALC.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module TX_PARITY_CALC
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/TX_SERIALIZER.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module TX_SERIALIZER
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/UART_TX.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module UART_TX
-INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/TBs/TX_TB.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module TX_TB
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/RX_DATA_SAMPLING.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RX_DATA_SAMPLING
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/RX_DESERIALIZER.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RX_DESERIALIZER
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/RX_EDGE_BIT_COUNTER.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RX_EDGE_BIT_COUNTER
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/RX_FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RX_FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/RX_PARITY_CHECK.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RX_PARITY_CHECK
+WARNING: [VRFC 10-3380] identifier 'par_res' is used before its declaration [F:/Digital_Track/Design_Projects/UART/RX_PARITY_CHECK.v:18]
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/RX_START_CHECK.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RX_START_CHECK
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/RX_STOP_CHECK.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RX_STOP_CHECK
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/UART_RX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module UART_RX
+INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/TBs/RX_TB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RX_TB

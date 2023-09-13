@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="RX_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="RX_TB" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="18,477 ps"></ZoomStartTime>
+      <ZoomEndTime time="18,599 ps"></ZoomEndTime>
+      <Cursor1Time time="18,555 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="182"></NameColumnWidth>
+      <ValueColumnWidth column_width="149"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/RX_TB/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/RST" type="logic">
+      <obj_property name="ElementShortName">RST</obj_property>
+      <obj_property name="ObjectShortName">RST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/RX_IN" type="logic">
+      <obj_property name="ElementShortName">RX_IN</obj_property>
+      <obj_property name="ObjectShortName">RX_IN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/PAR_EN" type="logic">
+      <obj_property name="ElementShortName">PAR_EN</obj_property>
+      <obj_property name="ObjectShortName">PAR_EN</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/PAR_TYP" type="logic">
+      <obj_property name="ElementShortName">PAR_TYP</obj_property>
+      <obj_property name="ObjectShortName">PAR_TYP</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/Data_Valid" type="logic">
+      <obj_property name="ElementShortName">Data_Valid</obj_property>
+      <obj_property name="ObjectShortName">Data_Valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/DUT/U1_FSM/current_state" type="array">
+      <obj_property name="ElementShortName">current_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/P_DATA" type="array">
+      <obj_property name="ElementShortName">P_DATA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">P_DATA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/DUT/U0_EB_COUNTER/bit_cnt" type="array">
+      <obj_property name="ElementShortName">bit_cnt[2:0]</obj_property>
+      <obj_property name="ObjectShortName">bit_cnt[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/DUT/U0_EB_COUNTER/edge_cnt" type="array">
+      <obj_property name="ElementShortName">edge_cnt[4:0]</obj_property>
+      <obj_property name="ObjectShortName">edge_cnt[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/DUT/U0_STRT_CKH/strt_glitch" type="logic">
+      <obj_property name="ElementShortName">strt_glitch</obj_property>
+      <obj_property name="ObjectShortName">strt_glitch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/DUT/U0_PAR_CHK/par_err" type="logic">
+      <obj_property name="ElementShortName">par_err</obj_property>
+      <obj_property name="ObjectShortName">par_err</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/DUT/U0_STP_CHK/stp_err" type="logic">
+      <obj_property name="ElementShortName">stp_err</obj_property>
+      <obj_property name="ObjectShortName">stp_err</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/DUT/U0_PAR_CHK/par_chk_en" type="logic">
+      <obj_property name="ElementShortName">par_chk_en</obj_property>
+      <obj_property name="ObjectShortName">par_chk_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/DUT/U0_DATA_SAMP/sampled_bit" type="logic">
+      <obj_property name="ElementShortName">sampled_bit</obj_property>
+      <obj_property name="ObjectShortName">sampled_bit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/RX_TB/Prescale" type="array">
+      <obj_property name="ElementShortName">Prescale[5:0]</obj_property>
+      <obj_property name="ObjectShortName">Prescale[5:0]</obj_property>
+   </wvobject>
+</wave_config>
