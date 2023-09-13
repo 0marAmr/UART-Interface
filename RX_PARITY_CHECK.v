@@ -10,6 +10,7 @@ module RX_PARITY_CHECK #(
     output reg par_err
 );
     
+    reg par_res;
     always @(posedge CLK or negedge RST) begin
         if (~RST) begin
             par_err <= 'b0;
@@ -22,7 +23,7 @@ module RX_PARITY_CHECK #(
         end
     end
 
-    reg par_res;
+    
     localparam  EVEN_PARITY = 1'b0;
     always @(posedge CLK or negedge RST) begin
         if (~RST) begin
