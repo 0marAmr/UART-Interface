@@ -1,7 +1,13 @@
 module TX_FSM (
-    input wire CLK, RST,
-    input wire Data_Valid, PAR_EN, ser_done,
-    output reg ser_en, busy, par_en, load,
+    input wire CLK,
+    input wire RST,
+    input wire Data_Valid,
+    input wire PAR_EN,
+    input wire ser_done,
+    output reg ser_en,
+    output reg busy,
+    output reg par_en,
+    output reg load,
     output reg [1:0] mux_sel
 );
     

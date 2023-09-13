@@ -1,8 +1,10 @@
 module TX_SERIALIZER #(
     parameter DATA_WIDTH = 8
 )(
-    input wire CLK, RST,
-    input wire ser_en, load,
+    input wire CLK,
+    input wire RST,
+    input wire ser_en,
+    input wire load,
     input wire [DATA_WIDTH-1:0] P_DATA,
     output wire ser_done,
     output wire ser_data

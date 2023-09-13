@@ -1,7 +1,10 @@
 module TX_OUTPUT (
     input wire CLK, RST,
     input wire [1:0] mux_sel,
-    input wire in0, in1, in2, in3,
+    input wire in0,
+    input wire in1,
+    input wire in2,
+    input wire in3,
     input wire busy,
     output reg TX_OUT
 );

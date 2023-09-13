@@ -1,8 +1,12 @@
 module UART_TX (
-    input wire CLK, RST,
-    input wire Data_Valid, PAR_EN, PAR_TYP,
+    input wire CLK,
+    input wire RST,
+    input wire Data_Valid,
+    input wire PAR_EN, 
+    input wire PAR_TYP,
     input wire [7:0] P_DATA,
-    output wire TX_OUT, busy
+    output wire TX_OUT, 
+    output wire busy
 );
     
     wire [1:0] mux_sel; 

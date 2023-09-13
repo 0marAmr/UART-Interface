@@ -1,7 +1,8 @@
 module TX_PARITY_CALC #(
     parameter DATA_WIDTH = 8
 )(
-    input wire CLK, RST,
+    input wire CLK, 
+    input wire RST,
     input wire par_en,
     input wire PAR_TYP,
     input wire [DATA_WIDTH-1:0] P_DATA,
