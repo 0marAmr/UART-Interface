@@ -8,7 +8,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UA
 INFO: [VRFC 10-311] analyzing module RX_FSM
 INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/RX_PARITY_CHECK.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RX_PARITY_CHECK
-WARNING: [VRFC 10-3380] identifier 'par_res' is used before its declaration [F:/Digital_Track/Design_Projects/UART/RX_PARITY_CHECK.v:18]
 INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/RX_START_CHECK.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RX_START_CHECK
 INFO: [VRFC 10-2263] Analyzing Verilog file "F:/Digital_Track/Design_Projects/UART/RX_STOP_CHECK.v" into library xil_defaultlib

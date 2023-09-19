@@ -3,10 +3,10 @@
 Oct 14 2022
 05:20:55
 F:/Digital_Track/Design_Projects/UART/RX_DATA_SAMPLING.v,1693862093,verilog,,F:/Digital_Track/Design_Projects/UART/RX_DESERIALIZER.v,,RX_DATA_SAMPLING,,,,,,,,
-F:/Digital_Track/Design_Projects/UART/RX_DESERIALIZER.v,1693851701,verilog,,F:/Digital_Track/Design_Projects/UART/RX_EDGE_BIT_COUNTER.v,,RX_DESERIALIZER,,,,,,,,
+F:/Digital_Track/Design_Projects/UART/RX_DESERIALIZER.v,1693865572,verilog,,F:/Digital_Track/Design_Projects/UART/RX_EDGE_BIT_COUNTER.v,,RX_DESERIALIZER,,,,,,,,
 F:/Digital_Track/Design_Projects/UART/RX_EDGE_BIT_COUNTER.v,1693862124,verilog,,F:/Digital_Track/Design_Projects/UART/RX_FSM.v,,RX_EDGE_BIT_COUNTER,,,,,,,,
 F:/Digital_Track/Design_Projects/UART/RX_FSM.v,1693861587,verilog,,F:/Digital_Track/Design_Projects/UART/RX_PARITY_CHECK.v,,RX_FSM,,,,,,,,
-F:/Digital_Track/Design_Projects/UART/RX_PARITY_CHECK.v,1693859917,verilog,,F:/Digital_Track/Design_Projects/UART/RX_START_CHECK.v,,RX_PARITY_CHECK,,,,,,,,
+F:/Digital_Track/Design_Projects/UART/RX_PARITY_CHECK.v,1694017321,verilog,,F:/Digital_Track/Design_Projects/UART/RX_START_CHECK.v,,RX_PARITY_CHECK,,,,,,,,
 F:/Digital_Track/Design_Projects/UART/RX_START_CHECK.v,1693860083,verilog,,F:/Digital_Track/Design_Projects/UART/RX_STOP_CHECK.v,,RX_START_CHECK,,,,,,,,
 F:/Digital_Track/Design_Projects/UART/RX_STOP_CHECK.v,1693860093,verilog,,F:/Digital_Track/Design_Projects/UART/UART_RX.v,,RX_STOP_CHECK,,,,,,,,
 F:/Digital_Track/Design_Projects/UART/TBs/RX_TB.v,1693863955,verilog,,,,RX_TB,,,,,,,,
