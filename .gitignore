@@ -7,3 +7,4 @@
 *.wdf
 xsim_1.c
 specs
+*.c
